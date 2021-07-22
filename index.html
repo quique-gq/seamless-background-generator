@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Seamless Background Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1 style="margin-bottom: 8px">Seamless Background Generator</h1>
+    <p style="margin-top: 8px">Easily create repeating tiled backgrounds online.</p>
+    <div class="panel" id="step1">
+      <p>Get started by uploading your image:</p>
+      <label for="upload"><img width="75" height="50" src="assets/cloud-computing.svg"></label>
+      <input id="upload" type="file" accept="image/*">
+      <hr>
+      <p>Source image</p>
+      <img id="uploadPreview">
+    </div>
+    <br>
+    <div class="panel" id="step2">
+      <p>Configure your new background:</p>
+      <canvas id="outputView"></canvas>
+      <div class="panel" id="configuration">
+        <ul>
+          <li>
+            <label for="widthInput">Background width: </label>
+            <input id="widthInput" type="number" value=500><span> pixels</span>&emsp;
+          </li>
+          <li>
+            <label for="heightInput">Background height: </label>
+            <input id="heightInput" type="number" value=500><span> pixels</span>&emsp;
+          </li>
+          <li>
+            <label for="imageRenderingInput">Preview image rendering: </label>
+            <select style="display: inline" id="imageRenderingInput">
+              <option value='["optimzeQuality"]'>Optimize quality</option>
+              <option value='["optimzeSpeed"]'>Optimize speed</option>
+              <option value='["crisp-edges"]'>Crisp edges</option>
+              <option value='["pixelated", "-moz-crisp-edges"]'>Pixelated (-moz-crisp-edges for Firefox)</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+    Created by Literal Line<br>
+    More at <a target="_blank" href="https://quique.gq">Quique.gq</a>
+  </footer>
+  <script src="seamless-background-generator.js"></script>
+</body>
+</html>
